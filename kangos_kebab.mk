@@ -21,20 +21,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from kebab device
 $(call inherit-product, device/oneplus/kebab/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-
-# Official
-EVO_BUILD_TYPE := OFFICIAL
-
-# FOD Animation
-EXTRA_FOD_ANIMATIONS := true
+# Inherit some common KangOS stuff.
+$(call inherit-product, vendor/kangos/config/common.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Official
+KANGOS_BUILDTYPE := OFFICIAL
+
+# FOD Animation
+EXTRA_FOD_ANIMATIONS := true
+
+# Gapps
+USE_GAPPS=true
+TARGET_INCLUDE_AOSP_REPLACEMENT := true
+
+# Maintainer
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.maintainer=Chandu
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_kebab
+PRODUCT_NAME := kangos_kebab
 PRODUCT_DEVICE := kebab
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus

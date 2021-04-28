@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_kebab.mk
+    $(LOCAL_DIR)/kangos_kebab.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_kebab-user \
-    evolution_kebab-userdebug \
-    evolution_kebab-eng
+    kangos_kebab-user \
+    kangos_kebab-userdebug \
+    kangos_kebab-eng
